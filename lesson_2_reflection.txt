@@ -2,21 +2,44 @@ What happens when you initialize a repository? Why do you need to do it?
 
     It creates an empty repository which has no commit in it. Because it will not save any files that you don't want to commit.
 
+
 How is the staging area different from the working directory and the repository?
 What value do you think it offers?
 
     It looks like a buffer area. Multiple files can be added to the staging area together to make one commit. In addition, one can use 'git reset' to remove files from staging area.
 
+
 How can you use the staging area to make sure you have one commit per logical
 change?
+
+    I can put multiple files into staging area to make one commit. I can also use "git reset" if I decide to remove files from staging area. After the staging area is well prepared, then one logical commit can be made.
+
 
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
 
+    When you want to keep the main version, and at the same time, create a seperate version or do some experiment. The branches can make you have several parallel versions. These versions are easy to checkout.
+
+
 How do the diagrams help you visualize the branch structure?
+
+    The diagrams can help me to find out from which commit the branch start.
+
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
 
+    By using 'git merge branch1 branch2', branch2 will be merged into branch1.
+    All the commits in both versions will combined into branch 1 by time order, and create a merge commit.
+    When we represent it in the diagrams, we can easily see where the branches start and end. Also, we can figure out the parent commit of each commit.
+
 What are the pros and cons of Git’s automatic merging vs. always doing merges
 manually?
+
+    Pro:
+    1. It can automatically find the commits' common parent.
+    2. It can order the commits by time.
+    3. It can help to find out the conflict part.
+    Cons:
+    1. Auto-merge might cause some error.
+
